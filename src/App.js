@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import ColorExplorer from './ColorExplorer';
 
 function App() {
   return (
-    <div className="ml-96">
-     <h1 className='font-bold'> welcome </h1>
-     <h2>some changes</h2>
+    <div className="div">
+      <ColorExplorer/>
     </div>
   );
 }
