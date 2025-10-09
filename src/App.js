@@ -1,14 +1,24 @@
 import './App.css';
-import ColorExplorer from './ColorExplorer';
 import About from './About';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './Home';
+import ColorExplorer from './Components/ColorExplorer/ColorExplorer';
 
 function App() {
+   const appRouter = createBrowserRouter([
+        {
+          path:"/",
+          element:<Home/>,
+          children :[
+            {
+              path:"colorExplorer",
+              element:<ColorExplorer/>
+            }
+          ]
+      }
+      ])
   return (
-    <div className="div">
-      <ColorExplorer/>
-      <About/>
-    </div>
+    <RouterProvider router={appRouter}/>
   );
 }
-
 export default App;
