@@ -3,6 +3,7 @@ import About from './About';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Home';
 import ColorExplorer from './Components/ColorExplorer/ColorExplorer';
+import Parent from './Components/Parent';
 
 function App() {
    const appRouter = createBrowserRouter([
@@ -14,6 +15,10 @@ function App() {
     path: "/colorExplorer",
     element: <ColorExplorer />,
   },
+  {
+    path: "/parent",
+    element: <Parent />
+  }
 ]);
 
   return (
